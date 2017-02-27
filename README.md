@@ -1,0 +1,1 @@
+Lutorpy is a libray built for deep learning with torch in python, by a two-way bridge between Python/Numpy and Lua/Torch, you can use any Torch modules(nn, rnn etc.) in python, and easily convert variables(array and tensor) between torch and numpy.
