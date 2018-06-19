@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends build-essential
 
 RUN curl -O https://repo.continuum.io/miniconda/Miniconda2-4.2.12-Linux-x86_64.sh && bash Miniconda2-4.2.12-Linux-x86_64.sh -b -p /anaconda2 && rm Miniconda2-4.2.12-Linux-x86_64.sh
 RUN echo 'export PATH="/anaconda2/bin:$PATH"' >> /root/.bashrc
-
+RUN /anaconda2/bin/pip --no-cache-dir install ipython==5.3.0
 RUN /anaconda2/bin/pip --no-cache-dir install ipykernel jupyter matplotlib numpy scipy sklearn Pillow pandas Quandl gym lxml && /anaconda2/bin/python -m ipykernel.kernelspec
 
 RUN /anaconda2/bin/conda install pytorch torchvision -c soumith --yes
